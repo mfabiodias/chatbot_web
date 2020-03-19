@@ -1,7 +1,7 @@
 /* importar as configurações do servidor */
 const app = require('./config/server');
 
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 3000;
 
 /* parametrizar a porta de escuta */
 const server = app.listen(port, function(){
