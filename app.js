@@ -1,22 +1,21 @@
 /* importar as configurações do servidor */
 const app = require('./config/server');
 
+const port = process.env.PORT || 80;
 
-
-// const port = process.env.PORT || 8080;
 /* parametrizar a porta de escuta */
-// const server = app.listen(port, function(){
-// 	console.log('Servidor online na porta '+port);
-// })
-
-const PORT = process.env.PORT || 3000;
-const INDEX = '/app.js';
-
-const server = app
-.use((req, res) => res.sendFile(INDEX, { root: __dirname }))
-.listen(PORT, function(){
-	console.log('Servidor online na porta '+PORT);
+const server = app.listen(port, function(){
+	console.log('Servidor online na porta '+port);
 })
+
+// const PORT = process.env.PORT || 3000;
+// const INDEX = '/app.js';
+
+// const server = app
+// .use((req, res) => res.sendFile(INDEX, { root: __dirname }))
+// .listen(PORT, function(){
+// 	console.log('Servidor online na porta '+PORT);
+// })
 
 const io = require('socket.io').listen(server);
 
