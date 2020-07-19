@@ -16,7 +16,7 @@
     "express": "^4.17.1",
     "express-validator": "^2.20.8",
     "socket.io": "^2.3.0",
-    "lodash": ">=4.17.12"
+    "lodash": ">=4.17.19"
   },
   "devDependencies": {
     "nodemon": "2.0.2"
